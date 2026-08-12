@@ -2,27 +2,33 @@ import { Award, BadgeCheck } from 'lucide-react';
 
 const certifications = [
   {
+    title: 'Technical English for Engineers',
+    issuer: 'NPTEL',
+    description: 'Developed technical communication skills, professional writing, and workplace language proficiency.',
+    icon: BadgeCheck,
+  },
+  {
+    title: 'Introduction to Internet of Things',
+    issuer: 'NPTEL',
+    description: 'Learned IoT architecture, sensor networks, communication protocols, and smart systems design.',
+    icon: BadgeCheck,
+  },
+  {
+    title: 'Developing Soft Skills and Personality',
+    issuer: 'NPTEL',
+    description: 'Focused on interpersonal skills, leadership, communication, and professional development.',
+    icon: BadgeCheck,
+  },
+  {
     title: 'Python Programming',
-    issuer: 'Online Certification',
-    description: 'Completed comprehensive Python training covering fundamentals, data structures, and problem solving.',
+    issuer: 'YBI Foundation',
+    description: 'Gained hands-on experience in Python fundamentals, data structures, logic development, and problem solving.',
     icon: BadgeCheck,
   },
   {
-    title: 'Verilog HDL',
-    issuer: 'Academic Certification',
-    description: 'Mastered hardware description language concepts including FSMs and digital circuit design.',
-    icon: BadgeCheck,
-  },
-  {
-    title: 'Machine Learning',
-    issuer: 'Online Certification',
-    description: 'Gained foundational knowledge in ML algorithms, model training, and real-world applications.',
-    icon: BadgeCheck,
-  },
-  {
-    title: 'SQL Essentials',
-    issuer: 'Online Certification',
-    description: 'Learned database querying, joins, aggregations, and relational database management.',
+    title: 'Data Science and AI/ML',
+    issuer: 'YBI Foundation',
+    description: 'Covered core data science methodologies, machine learning algorithms, data analysis, and predictive modeling.',
     icon: BadgeCheck,
   },
 ];
@@ -43,7 +49,7 @@ export default function Certifications() {
           <div className="section-line w-24 mx-auto mt-4" />
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {certifications.map((c, idx) => {
             const Icon = c.icon;
             return (
@@ -66,7 +72,7 @@ export default function Certifications() {
                   <div className="flex items-center gap-1.5 mt-4 pt-4 border-t border-[#1e4d8c]/20">
                     <Award size={12} className="text-[#64b5f6]" />
                     <span className="text-[#8892b0] text-xs">Certified</span>
-      </div>
+                  </div>
                 </div>
               </div>
             );
