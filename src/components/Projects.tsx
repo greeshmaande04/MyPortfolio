@@ -4,6 +4,7 @@ import {
   FolderGit2,
   Users,
   GraduationCap,
+  Camera,
 } from 'lucide-react';
 
 const projects = [
@@ -12,7 +13,7 @@ const projects = [
     type: 'Frontend Project',
     icon: FolderGit2,
     description:
-      'Designed and developed a responsive personal portfolio website to showcase my skills, projects, internships, education, and professional profile.',
+      'Designed and developed a responsive personal portfolio website to showcase my skills, projects and contact details using React.js.',
     tags: ['React.js', 'JavaScript', 'HTML5', 'CSS3'],
     highlights: [
       'Responsive portfolio design',
@@ -22,11 +23,25 @@ const projects = [
   },
 
   {
+    title: 'Instagram Clone',
+    type: 'React.js Project',
+    icon: Camera,
+    description:
+      'Built an Instagram-style interface with a post feed, like button and user profile page using reusable React components and hooks.',
+    tags: ['React.js', 'JavaScript', 'HTML5', 'CSS3'],
+    highlights: [
+      'Post feed with like button',
+      'User profile page',
+      'Responsive layouts',
+    ],
+  },
+
+  {
     title: 'Employee Directory',
     type: 'React.js Project',
     icon: Users,
     description:
-      'Developed an employee directory application to manage and display employee information through a simple and user-friendly interface.',
+      'Developed an employee directory application to manage and display employee information through reusable components and state management.',
     tags: ['React.js', 'JavaScript', 'HTML5', 'CSS3'],
     highlights: [
       'Employee data management',
@@ -74,7 +89,6 @@ export default function Projects() {
           <div className="section-line w-24 mx-auto mt-4" />
         </div>
 
-
         {/* Project Cards */}
         <div className="grid md:grid-cols-2 gap-6">
 
@@ -84,7 +98,7 @@ export default function Projects() {
             return (
               <div
                 key={idx}
-                className="reveal card-glow bg-[#0a1628]/80 rounded-2xl p-7 backdrop-blur-sm group"
+                className="reveal card-glow group bg-[#0a1628]/80 rounded-2xl p-7 backdrop-blur-sm"
                 style={{
                   transitionDelay: `${idx * 150}ms`,
                 }}
@@ -93,7 +107,7 @@ export default function Projects() {
                 {/* Icon & Links */}
                 <div className="flex items-start justify-between mb-5">
 
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#1e4d8c] to-[#0a2952] flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#1e4d8c] to-[#0a1628] flex items-center justify-center">
                     <Icon
                       size={22}
                       className="text-[#64b5f6]"
@@ -102,35 +116,32 @@ export default function Projects() {
 
                   <div className="flex gap-2 opacity-60 group-hover:opacity-100 transition-opacity">
 
-                    <span className="w-8 h-8 rounded-lg border border-[#1e4d8c]/40 flex items-center justify-center text-[#8892b0] hover:text-[#64b5f6] hover:border-[#64b5f6] transition-colors cursor-pointer">
+                    <span className="w-8 h-8 rounded-lg border border-[#1e4d8c]/40 flex items-center justify-center text-[#8892b0]">
                       <Github size={15} />
                     </span>
 
-                    <span className="w-8 h-8 rounded-lg border border-[#1e4d8c]/40 flex items-center justify-center text-[#8892b0] hover:text-[#64b5f6] hover:border-[#64b5f6] transition-colors cursor-pointer">
+                    <span className="w-8 h-8 rounded-lg border border-[#1e4d8c]/40 flex items-center justify-center text-[#8892b0]">
                       <ExternalLink size={15} />
                     </span>
 
                   </div>
-                </div>
 
+                </div>
 
                 {/* Project Type */}
                 <div className="text-xs text-[#64b5f6] font-medium tracking-wide uppercase mb-2">
                   {p.type}
                 </div>
 
-
                 {/* Project Title */}
                 <h3 className="text-white font-bold text-xl mb-3">
                   {p.title}
                 </h3>
 
-
                 {/* Description */}
                 <p className="text-[#8892b0] text-sm leading-relaxed mb-5">
                   {p.description}
                 </p>
-
 
                 {/* Highlights */}
                 <div className="space-y-1.5 mb-5">
@@ -146,7 +157,6 @@ export default function Projects() {
                   ))}
 
                 </div>
-
 
                 {/* Technologies */}
                 <div className="flex flex-wrap gap-2 pt-4 border-t border-[#1e4d8c]/20">
@@ -167,6 +177,7 @@ export default function Projects() {
           })}
 
         </div>
+
       </div>
     </section>
   );
