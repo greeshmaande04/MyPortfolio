@@ -3,35 +3,64 @@ import { Code2, GitBranch, Wrench, Heart } from 'lucide-react';
 
 const skillGroups = [
   {
-    label: 'Languages',
-    icon: Code2,
-    skills: [
-      { name: 'JavaScript', level: 80 },
-      { name: 'Python', level: 75 },
-    ],
-  },
-  {
     label: 'Frontend',
     icon: Code2,
     skills: [
+      { name: 'React.js', level: 80 },
+      { name: 'JavaScript', level: 80 },
       { name: 'HTML5', level: 95 },
       { name: 'CSS3', level: 90 },
-      { name: 'React JS', level: 80 },
+      { name: 'CSS Grid', level: 85 },
+      { name: 'Flexbox', level: 85 },
+      { name: 'Bootstrap', level: 80 },
+      { name: 'Responsive Design', level: 85 },
+      { name: 'DOM Manipulation', level: 80 },
     ],
   },
   {
-    label: 'Version Control',
-    icon: GitBranch,
+    label: 'React',
+    icon: Code2,
     skills: [
-      { name: 'Git', level: 85 },
-      { name: 'GitHub', level: 85 },
+      { name: 'Functional Components', level: 85 },
+      { name: 'useState Hook', level: 85 },
+      { name: 'Props', level: 85 },
+      { name: 'Reusable Components', level: 80 },
+    ],
+  },
+  {
+    label: 'Backend',
+    icon: Wrench,
+    skills: [
+      { name: 'Python', level: 75 },
+      { name: 'Django', level: 65 },
+      { name: 'REST APIs', level: 70 },
+      { name: 'SQL', level: 70 },
+      { name: 'DBMS', level: 70 },
+      { name: 'OOP', level: 70 },
+    ],
+  },
+  {
+    label: 'APIs and Web',
+    icon: Code2,
+    skills: [
+      { name: 'Fetch API', level: 80 },
+      { name: 'Async/Await', level: 75 },
+      { name: 'JSON', level: 85 },
+      { name: 'HTTP/HTTPS', level: 75 },
+      { name: 'REST API Integration', level: 75 },
     ],
   },
   {
     label: 'Tools',
-    icon: Wrench,
+    icon: GitBranch,
     skills: [
+      { name: 'Git', level: 85 },
+      { name: 'GitHub', level: 85 },
+      { name: 'Version Control', level: 85 },
       { name: 'VS Code', level: 90 },
+      { name: 'Vercel', level: 80 },
+      { name: 'NPM', level: 80 },
+      { name: 'PIP', level: 75 },
       { name: 'MS Excel', level: 75 },
     ],
   },
@@ -39,23 +68,27 @@ const skillGroups = [
     label: 'Soft Skills',
     icon: Heart,
     skills: [
-      { name: 'Communication', level: 85 },
       { name: 'Problem Solving', level: 90 },
-      { name: 'Team Collaboration', level: 90 },
+      { name: 'Communication', level: 85 },
+      { name: 'Teamwork', level: 90 },
+      { name: 'Adaptability', level: 85 },
     ],
   },
 ];
 
 const techTags = [
+  'React.js',
+  'JavaScript',
   'HTML5',
   'CSS3',
-  'JavaScript',
-  'React JS',
+  'Bootstrap',
+  'Python',
+  'Django',
+  'SQL',
   'Git',
   'GitHub',
-  'Python',
   'VS Code',
-  'MS Excel',
+  'Vercel',
 ];
 
 export default function Skills() {
@@ -123,7 +156,6 @@ export default function Skills() {
 
                 {/* Group Title */}
                 <div className="flex items-center gap-3 mb-5">
-
                   <div className="w-9 h-9 rounded-lg bg-[#1e4d8c]/30 flex items-center justify-center">
                     <Icon
                       size={16}
@@ -134,7 +166,6 @@ export default function Skills() {
                   <h3 className="text-white font-semibold">
                     {group.label}
                   </h3>
-
                 </div>
 
                 {/* Skills */}
@@ -144,7 +175,6 @@ export default function Skills() {
                     <div key={skill.name}>
 
                       <div className="flex justify-between items-center mb-1.5">
-
                         <span className="text-[#8892b0] text-sm">
                           {skill.name}
                         </span>
@@ -152,23 +182,19 @@ export default function Skills() {
                         <span className="text-[#64b5f6] text-sm font-medium">
                           {skill.level}%
                         </span>
-
                       </div>
 
                       <div className="h-1.5 bg-[#1e4d8c]/20 rounded-full overflow-hidden">
-
                         <div
                           className="skill-bar-fill"
                           data-level={skill.level}
                         />
-
                       </div>
 
                     </div>
                   ))}
 
                 </div>
-
               </div>
             );
           })}
@@ -187,7 +213,7 @@ export default function Skills() {
             {techTags.map(tag => (
               <span
                 key={tag}
-                className="px-4 py-2 rounded-lg bg-[#0a1628]/80 border border-[#1e4d8c]/30 text-[#64b5f6] text-sm font-medium hover:border-[#64b5f6]/60 hover:bg-[#1e4d8c]/20 transition-all duration-300 cursor-default"
+                className="px-4 py-2 rounded-lg bg-[#0a1628]/80 border border-[#1e4d8c]/30 text-[#8892b0] text-sm"
               >
                 {tag}
               </span>
